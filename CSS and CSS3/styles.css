@@ -1,0 +1,10 @@
+.fontClasses {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+.textClasses {
+    text-align: center;
+    text-shadow: 5px 5px gray;
+}
