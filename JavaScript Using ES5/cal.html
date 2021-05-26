@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function add() {
+        var n1 = document.getElementById("n1").value;
+        var n2 = document.getElementById("n2").value;
+        document.getElementById("result").value = eval(n1)+eval(n2);
+        document.getElementById("n1").value="";
+        document.getElementById("n2").value="";
+        
+    }
+    </script>
+</head>
+<body>
+    1st Number :<input type="text" id="n1"><br/>
+    2nd Number :<input type="text" id="n2"><br/>
+    Result :<input type="rext" id="result"><br/>
+    <input type="button" value="Add" onclick="add()"/>
+</body>
+</html>
