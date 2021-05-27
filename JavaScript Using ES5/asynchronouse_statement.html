@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    document.write("1st Statement")
+    setTimeout("dis1()",3000);      // only one time after 3 sec
+    var obj = setInterval("dis2()",1000)      // again and again every 1 sec 
+    document.write("<br/>3rd Statement")
+    function dis1() {
+        //document.write("<br/>2nd Statement")
+        document.getElementById("d1").innerHTML="<br/>2nd Statement";
+    }
+    var flag = 0;
+    function dis2(){
+        if(flag>10){
+              obj.clearInterval();  
+        }else {
+            document.getElementById("d2").innerHTML="4th Statement "+flag;
+        }
+        flag++;
+    }
+    </script>
+</head>
+<body>
+    <div id="d1">
+
+    </div>
+    <div id="d2">
+
+    </div>
+</body>
+</html>

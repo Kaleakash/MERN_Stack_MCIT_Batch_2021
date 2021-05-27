@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function start(){
+        setInterval("display()",1000)
+    }
+    var count =0;
+    function display() {
+            if(count%2 == 0){
+            //document.bgColor="Red";    
+            //document.fgColor="Green" 
+document.getElementById("imgId").src="https://media.gettyimages.com/photos/various-cut-flowers-detail-picture-id577017999?k=6&m=577017999&s=612x612&w=0&h=j_jNDYiaqfpWisG32uhyXAZd9RzjKUQ4Ju5ampCUVzQ="   
+document.getElementById("obj").style.backgroundColor="yellow";
+document.getElementById("obj").style.fontSize="20px";
+            }else {
+            //document.bgColor="Green";
+            //document.fgColor="Red"        
+document.getElementById("imgId").src="https://media.gettyimages.com/photos/daisy-on-white-with-clipping-path-picture-id182838201?k=6&m=182838201&s=612x612&w=0&h=MLt18MesK_MFL0ekwCwX0LBLZiCNtepjZoSh7rs2GaM="
+document.getElementById("obj").style.backgroundColor="pink";
+document.getElementById("obj").style.fontSize="40px";
+            }
+            count++;
+    }
+    </script>
+</head>
+<body onload="start()">
+    <h1 id="obj">Welcome to JS with asynchronous operation</h1>
+    <img id ="imgId" src="https://media.gettyimages.com/photos/hibiscus-picture-id1127051326?k=6&m=1127051326&s=612x612&w=0&h=aynvcV9z3iSvpBbUNZRHA_uQPn82rwPTmGHHJIeirJM="/>
+</body>
+</html>
