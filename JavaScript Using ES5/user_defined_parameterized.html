@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function Customer(cid,name,age){
+            this.cid = cid;      //instance property 
+            this.name = name;
+            this.age = age;
+            this.displayInfo = function() {
+                document.write("<br/>Customer details are ")
+                document.write("<br> Id is "+this.cid);
+                document.write("<br> name is "+this.name);
+                document.write("<br> Age is "+this.age);
+            }
+    }
+    var c1 = new Customer(100,"Ramesh",24);
+    var c2 = new Customer(101,"Meeta",21);
+    c1.displayInfo();
+    c2.displayInfo();
+    Customer.prototype.phone="";    // adding dynamic property 
+    c1.phone=9900
+    c2.phone=99123
+    alert(c1.phone);
+    alert(c2.phone)
+    Customer.prototype.info = function() {  // adding dynamic behavour 
+                alert("This is customer dyanmic function");
+    }
+    c1.info();
+    c2.info();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

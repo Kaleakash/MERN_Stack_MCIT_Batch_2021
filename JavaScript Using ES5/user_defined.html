@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    //1st Example 
+    function Employee() {
+            this.empId=100;
+            this.empName="Ajay";  
+            this.disEmpInfo = function() {
+                document.write("<br/>id is "+this.empId);
+                document.write("<br> name is "+this.empName);
+            } 
+    }
+    //Employee();
+    var emp1 = new Employee();
+    //alert(emp1.empId)
+    //alert(emp1.empName)
+    emp1.disEmpInfo();
+    var emp2 = new Employee();
+    emp2.disEmpInfo();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
