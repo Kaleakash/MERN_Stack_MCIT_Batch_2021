@@ -1,0 +1,14 @@
+.fontClass {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.textClass {
+    text-align: center;
+    text-decoration: none;
+    color: green;
+}
+.myButton {
+    color:skyblue;
+}
