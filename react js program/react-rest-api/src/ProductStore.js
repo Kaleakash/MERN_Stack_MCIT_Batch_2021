@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import ProductRetrieve from './ProductRetrieve';
+import ProductDelete from './ProductDelete';
+import ProductUpdate from './ProductUpdate';
 class ProductStore extends React.Component {
     constructor(props){
         super(props);
@@ -30,7 +32,10 @@ class ProductStore extends React.Component {
                 <input type="reset" value="Reset"/>
             </form>
             <hr/>
+            <ProductDelete></ProductDelete><br/>
+            <ProductUpdate></ProductUpdate><br/>
             <ProductRetrieve></ProductRetrieve>
+            
             </>
         )
     }
