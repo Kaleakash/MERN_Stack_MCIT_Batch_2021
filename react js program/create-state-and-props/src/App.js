@@ -1,4 +1,5 @@
 import React from 'react';
+import AddNames from './AddNames';
 import ButtonComponent from './Buttons';
 import Customer from './Customer';
 
@@ -24,8 +25,9 @@ class App extends React.Component {
         <ButtonComponent type="reset" value="Reset"></ButtonComponent>
         <ButtonComponent type="button" value="Normal Button"></ButtonComponent>
         <ButtonComponent type="button" value="Click Button"></ButtonComponent>
-    <ButtonComponent type="button" value="Db click Button"></ButtonComponent> */}
-        <Customer></Customer>
+    <ButtonComponent type="button" value="Db click Button"></ButtonComponent> 
+        <Customer></Customer>*/}
+        <AddNames></AddNames>
       </div>
     )
 
