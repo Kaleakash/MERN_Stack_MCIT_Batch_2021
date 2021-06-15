@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    let num = [10,20,30,40,50]
+        window.addEventListener("load",()=> {
+
+            let myButton = document.getElementById("b1");
+                myButton.addEventListener("click",()=> {
+                 num.forEach(v=>console.log(v));
+            })
+
+        })
+        console.log("script loaded...")
+       </script>
+</head>
+<body>
+    <input type="button" value="click here" id="b1"/>
+    
+</body>
+</html>
