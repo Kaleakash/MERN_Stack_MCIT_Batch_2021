@@ -1,0 +1,39 @@
+Get all product details 
+
+http://localhost:9999/allProducts
+
+Get Product details using pid 
+
+http://localhost:9999/getProductDetailsById/100         : found 
+
+http://localhost:9999/getProductDetailsById/1000        : found not availabe 
+
+Store product details 
+
+http://localhost:9999/storeProductDetails 
+
+header of browser with plugin 
+content-type    application/json 
+
+{"pid":102,"pname":"Laptop","price":85000}
+
+delete product details using pid 
+
+http://localhost:9999/deleteProductById/100
+
+http://localhost:9999/deleteProductById/10000
+
+
+Update the product price using pid 
+
+http://localhost:9999/updateProductPriceById
+
+header of browser with plugin 
+content-type    application/json 
+
+{"pid":100,"price":2000}
+
+{"pid":105,"price":5000}
+
+
+
