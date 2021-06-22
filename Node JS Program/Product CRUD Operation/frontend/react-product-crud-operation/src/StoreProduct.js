@@ -20,6 +20,7 @@ export default class StoreProduct extends Component {
     render() {
         return (
             <div>
+                <h2>Store Product Details</h2>
             <form onSubmit={this.handleSubmit}>
             <label>PId</label>
             <input type="text" name="pid" onChange={this.handleChange}/><br/>

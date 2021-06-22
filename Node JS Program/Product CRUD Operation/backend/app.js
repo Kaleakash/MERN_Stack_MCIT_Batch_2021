@@ -31,7 +31,7 @@ app.get("/getProductDetailsById/:pid",(req,res)=> {
         if(result == undefined){
             res.send("Product details are not available with id as "+pid)
         }else {
-            res.send(result);       // return product object 
+            res.send(`PId is ${result.pid}, PName is ${result.pname}, Price is ${result.price}`);       // return product object 
             //res.send("Price is "+result.price);
         }
 })
@@ -67,7 +67,7 @@ app.put("/updateProductPriceById",(req,res)=> {
     let index = products.findIndex(p=>p.pid==pid);
     if(index >= 0){
             let product = products[index];
-            product.price = product.price+price;
+            product.price = product.price+eval(price);
             res.send("Product price increase successfully..")
     }else {
         res.send("Record is not available with pid is "+pid);
