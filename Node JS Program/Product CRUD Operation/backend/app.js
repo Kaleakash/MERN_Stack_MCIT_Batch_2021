@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:true})) //enable body part part data fro
 app.use(bodyParser.json());                 // enable the json data.  
 app.use(cors());            //enable cors origin features 
 
-//Initial Data 
+//Initial Data or Retrieve data from file using fs module products.json 
 let products = [
     {"pid":100,"pname":"Tv","price":120000},
     {"pid":101,"pname":"Computer","price":55000}
