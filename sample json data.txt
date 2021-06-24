@@ -1,4 +1,4 @@
-db.Employee.insertMany([
+db.EmployeeDetails.insertMany([
 {_id:1,name:"Raj",salary:45000,deptId:10,city:"Bangalore",mgrId:null},
 {_id:2,name:"Ravi",salary:30000,deptId:20,city:"Bangalore",mgrId:1},
 {_id:3,name:"Ramesh",salary:25000,deptId:20,city:"Bangalore",mgrId:1},
@@ -23,3 +23,7 @@ db.Football.insertMany([
 { "_id" : ObjectId("5b27933b01271eb9de48c828"), "fName" : "Cristiano", "lName" : "Ronaldo", "league" : "Champions League", "goalsScored" : 20, "year" : 2013 },
 { "_id" : ObjectId("5b27933b01271eb9de48c829"), "fName" : "Cristiano", "lName" : "Ronaldo", "league" : "Champions League", "goalsScored" : 25, "year" : 2014 },
 { "_id" : ObjectId("5b27933b01271eb9de48c82a"), "fName" : "Cristiano", "lName" : "Ronaldo", "league" : "Champions League", "goalsScored" : 30, "year" : 2015 }])
+
+
+Display league name with number of goals Scored 
+
