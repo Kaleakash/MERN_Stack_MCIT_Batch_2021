@@ -1,0 +1,7 @@
+//Get all 
+
+http://localhost:9999/api/product/getAllProducts
+
+
+//update price ( put method )
+http://localhost:9999/api/product/updatePriceUsingId
