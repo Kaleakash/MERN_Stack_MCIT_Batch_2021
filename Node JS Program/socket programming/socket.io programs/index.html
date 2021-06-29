@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- This code help to connect the socket library-->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script type="text/JavaScript">
+        let socket = io();
+        socket.emit("obj","Hello Server");      //send message to socket.io server 
+        function sendData(){
+            let data = document.getElementById("msg").value;
+            socket.emit("obj",data);
+            document.getElementById("msg").value=""
+        }
+    </script>
+</head>
+<body>
+    <h2>Socket.io Example</h2>
+    <textarea id="msg">
+
+    </textarea>
+    <br/>
+    <input type="button" value="send" onclick="sendData()"/>
+</body>
+</html>
