@@ -2,15 +2,15 @@ let app = require("../src/app")
 
 let superTest = require("supertest");
 
-xdescribe("REST API Testing",()=> {
+describe("REST API Testing",()=> {
     
-    it("Get Method - Simple Text Message Testing ",(finish)=> {
+    xit("Get Method - Simple Text Message Testing ",(finish)=> {
     superTest(app).get("/simpleText").expect(200).
     expect(data=>expect(data.text).toBe("Welcome to REST API")).
     end(error=>error ? finish(error) : finish())
     })
 
-    it("Get Method - JSON Object ",(finish)=> {
+    xit("Get Method - JSON Object ",(finish)=> {
         superTest(app).get("/emp").expect(200).
         expect(data=>{
             let emp = data.body;
@@ -25,7 +25,7 @@ xdescribe("REST API Testing",()=> {
     })
 
 
-    it("Get Method - JSON Array Object ",(finish)=> {
+    xit("Get Method - JSON Array Object ",(finish)=> {
         superTest(app).get("/employees").expect(200).
         expect(data=>{
             let emp = data.body;
@@ -41,11 +41,22 @@ xdescribe("REST API Testing",()=> {
         end(error=>error ? finish(error) : finish())
     })
 
-    it("Post Method Testing",(finish)=> {
+    xit("Post Method Testing",(finish)=> {
         let emp ={id:3,name:"Ramesh",age:32}
         superTest(app).post("/storeEmployee").send(emp).
         expect(200).
         expect(data=>expect("Record stored successfully").toBe(data.text)).
+        end(error=>error ? finish(error) : finish())
+    })
+
+
+    it("Get Method - JSON DB Data ",(finish)=> {
+        superTest(app).get("/product/allProduct").expect(200).
+        expect(data=>{
+               let product = data.body;
+               expect(2).toEqual(product.length);
+
+        }).
         end(error=>error ? finish(error) : finish())
     })
 })

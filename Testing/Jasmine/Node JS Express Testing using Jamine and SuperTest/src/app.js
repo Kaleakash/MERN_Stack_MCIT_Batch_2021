@@ -1,7 +1,14 @@
 let express = require("express");
 let app = express();
 let bodyParser = require("body-parser");
+let mongoose = require("mongoose");
+let ProductRouter = require("./product.router");
 app.use(bodyParser.json())
+let url = "mongodb://localhost:27017/mydb123"
+
+mongoose.connect(url);
+mongoose.connection;
+
 let emp = {id:100,name:"Ravi",age:21};
 let employees =[
     {id:1,name:"Ajay",age:-23},
@@ -23,6 +30,7 @@ app.post("/storeEmployee",(req,res)=> {
         res.send("Record stored successfully");
 })
 
+app.use("/product",ProductRouter);
 
 app.listen(9090,()=>console.log("Server running on port number 9090"))
 
