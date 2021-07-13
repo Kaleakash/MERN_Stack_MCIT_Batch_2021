@@ -1,0 +1,62 @@
+In ES2 Node 
+
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html
+
+-->curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+-->. ~/.nvm/nvm.sh
+
+-->nvm install node
+
+-->node --version 
+
+-->npm --version 
+
+
+
+Install the git 
+
+-->sudo yum install git -y
+
+-->git --version 
+
+Mongo DB 
+
+
+-->sudo vi /etc/yum.repos.d/mongodb-org-4.0.repo
+
+copy the code in file 
+
+[mongodb-org-4.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc
+
+Then click on esc 
+Then write : wq! (to write and save the data in file)
+
+to download the mongo db dependencies 
+
+-->sudo yum install -y mongodb-org
+
+-->sudo service mongod start
+
+Then check the mongo command 
+
+install the docker in ES2 instance 
+
+-->  sudo yum update -y
+--> sudo yum install docker -y
+--> sudo service docker stop
+-->sudo service docker start
+
+-->  sudo chmod 666 /var/run/docker.sock
+--> sudo usermod -aG docker ec2-user
+--> docker pull imageName:latest 
+
+
+
+https://hackernoon.com/running-docker-on-aws-ec2-83a14b780c56
+
